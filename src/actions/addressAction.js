@@ -48,3 +48,25 @@ export const addAddress = info => async dispatch => {
         });
     }
 };
+
+export const getAddress = () => async dispatch => {
+    try {
+        const config = {
+            auth: {
+                username: "09822222222",
+                password: "sana1234"
+            }
+        };
+
+        const res = await axios.get(
+            "http://stage.achareh.ir/api/karfarmas/address",
+            config
+        );
+
+        const data = await res.data;
+        dispatch({
+            type: GET_ADDRESS,
+            payload: data
+        });
+    } catch (error) {}
+};
