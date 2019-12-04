@@ -40,8 +40,10 @@ a {
     min-height: 100vh;
     .app__add-address,
     .app__addresses {
+        padding: 1em;
         flex: 250px 1;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -57,6 +59,13 @@ a {
     width: 60%;
     padding: 0.5em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    .address__info {
+        display: flex;
+        justify-content: space-between;
+        p {
+            color: #777;
+        }
+    }
 }
 
 .form {
@@ -68,6 +77,15 @@ a {
         .form__text {
             padding: 0.3em 0.5em;
         }
+    }
+}
+
+.alerts {
+    .alert__item {
+        background-color: rgb(233, 35, 35);
+        margin-bottom: 0.5em;
+        padding: 0.5em;
+        color: #fff;
     }
 }
 

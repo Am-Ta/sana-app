@@ -10,7 +10,8 @@ export default (state = initialState, action) => {
         case ADD_ADDRESS:
             return {
                 ...state,
-                user: action.payload
+                user: action.payload,
+                error: null
             };
         case GET_ADDRESS:
             return {

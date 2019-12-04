@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-
+import Alerts from "../alert/Alerts";
 import { connect } from "react-redux";
 import { addAddress } from "../../actions/addressAction";
 
@@ -29,10 +29,20 @@ const AddAddress = ({ addAddress }) => {
     const handleSubmit = e => {
         e.preventDefault();
         addAddress(info);
+        setInfo({
+            first_name: "",
+            last_name: "",
+            mobileNumber: "",
+            phoneNumber: "",
+            address: "",
+            gender: "male"
+        });
     };
 
     return (
         <div className="app__add-address">
+            <Alerts />
+
             <form className="form" onSubmit={handleSubmit}>
                 <div className="form__item">
                     <label>First Name</label>

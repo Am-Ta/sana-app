@@ -68,5 +68,10 @@ export const getAddress = () => async dispatch => {
             type: GET_ADDRESS,
             payload: data
         });
-    } catch (error) {}
+    } catch (error) {
+        dispatch({
+            type: ERROR_ADDRESS,
+            payload: error.response.data
+        });
+    }
 };
