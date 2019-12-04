@@ -32,69 +32,59 @@ const AddAddress = ({ addAddress }) => {
     };
 
     return (
-        <div className="app_add-address">
+        <div className="app__add-address">
             <form className="form" onSubmit={handleSubmit}>
                 <div className="form__item">
-                    <label>
-                        First Name
-                        <input
-                            type="text"
-                            name="first_name"
-                            value={first_name}
-                            className="form__text"
-                            onChange={handleChange}
-                        />
-                    </label>
+                    <label>First Name</label>
+                    <input
+                        type="text"
+                        name="first_name"
+                        value={first_name}
+                        className="form__text"
+                        onChange={handleChange}
+                    />
                 </div>
                 <div className="form__item">
-                    <label>
-                        Last Name
-                        <input
-                            type="text"
-                            name="last_name"
-                            value={last_name}
-                            className="form__text"
-                            onChange={handleChange}
-                        />
-                    </label>
+                    <label>Last Name</label>
+                    <input
+                        type="text"
+                        name="last_name"
+                        value={last_name}
+                        className="form__text"
+                        onChange={handleChange}
+                    />
                 </div>
                 <div className="form__item">
-                    <label>
-                        Mobile Number
-                        <input
-                            type="tel"
-                            name="mobileNumber"
-                            value={mobileNumber}
-                            className="form__text"
-                            onChange={handleChange}
-                            placeholder="0912*******"
-                        />
-                    </label>
+                    <label>Mobile Number</label>
+                    <input
+                        type="tel"
+                        name="mobileNumber"
+                        value={mobileNumber}
+                        className="form__text"
+                        onChange={handleChange}
+                        placeholder="0912*******"
+                    />
                 </div>
                 <div className="form__item">
-                    <label>
-                        Phone Number
-                        <input
-                            type="tel"
-                            name="phoneNumber"
-                            value={phoneNumber}
-                            className="form__text"
-                            onChange={handleChange}
-                            placeholder="021********"
-                        />
-                    </label>
+                    <label>Phone Number</label>
+                    <input
+                        type="tel"
+                        name="phoneNumber"
+                        value={phoneNumber}
+                        className="form__text"
+                        onChange={handleChange}
+                        placeholder="021********"
+                    />
                 </div>
                 <div className="form__item">
-                    <label>
-                        Address
-                        <input
-                            type="text"
-                            name="address"
-                            value={address}
-                            className="form__text"
-                            onChange={handleChange}
-                        />
-                    </label>
+                    <label>Address</label>
+                    <input
+                        type="text"
+                        name="address"
+                        value={address}
+                        className="form__text"
+                        onChange={handleChange}
+                    />
                 </div>
                 <div className="form__item">
                     <label>
@@ -122,7 +112,7 @@ const AddAddress = ({ addAddress }) => {
                 </div>
                 <div className="form__item">
                     <button type="submit" className="btn btn_block btn_success">
-                        Next <i className="fas fa-arrow-right"></i>
+                        ADD <i className="fas fa-arrow-right"></i>
                     </button>
                 </div>
             </form>

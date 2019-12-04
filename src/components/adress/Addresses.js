@@ -15,7 +15,7 @@ const Addresses = ({ address, user, getAddress }) => {
     }, [user]);
 
     return (
-        <div className="app_addresses">
+        <div className="app__addresses">
             {address.length > 0 &&
                 address
                     .slice(address.length - 5)

@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Sulphur+Point:300,400,700&display=swap");
 
+@font-face {
+    font-family: "Sahel";
+    src: url(./assets/font/Sahel.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: sahel;
+    src: url(./assets/font/Sahel-Bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
 // Simple CSS Reset
 *,
 *:after,
@@ -9,11 +23,84 @@
 }
 
 body {
-    font-family: "Sulphur Point", sans-serif;
+    font-family: "Sulphur Point", "Sahel", sans-serif;
 }
 button,
 input,
-textarea {
+textarea,
+a {
     font-family: inherit;
     font-size: inherit;
+    outline: none;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    .app__add-address,
+    .app__addresses {
+        flex: 250px 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .app__addresses {
+        flex-direction: column;
+        flex: 250px 2;
+        direction: rtl;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+.address {
+    width: 60%;
+    padding: 0.5em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.form {
+    .form__item {
+        margin-bottom: 1em;
+        label {
+            display: block;
+        }
+        .form__text {
+            padding: 0.3em 0.5em;
+        }
+    }
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.5em;
+    font-weight: bold;
+    border-radius: 2px;
+    &.btn_block {
+        display: block;
+        width: 100%;
+    }
+    &.btn_success {
+        background-color: rgba(46, 177, 34, 0.719);
+        color: #fff;
+        &:hover {
+            background-color: rgba(69, 219, 55, 0.719);
+        }
+    }
+}
+
+@media screen and (min-width: 40em) {
+    .app {
+        flex-direction: row;
+        .app__add-address {
+            flex: 250px 2;
+        }
+
+        .app__addresses {
+            flex: 250px 1;
+        }
+    }
 }

@@ -7,10 +7,8 @@ import Addresses from "./components/adress/Addresses";
 const App = () => {
     return (
         <div className="app">
-            <div className="container">
-                <AddAddress />
-                <Addresses />
-            </div>
+            <AddAddress />
+            <Addresses />
         </div>
     );
 };
