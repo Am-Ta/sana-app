@@ -1,9 +1,11 @@
 import React from "react";
+import "./App.scss";
+import AddAddress from "./components/adress/AddAddress";
 
 const App = () => {
     return (
-        <div>
-            <h1>Hello World</h1>
+        <div className="container">
+            <AddAddress />
         </div>
     );
 };
